@@ -37,6 +37,9 @@ title: 作者
     {% if posts_count != 0 %}
       <h2 id="{{author[1].display_name}}">{{author[1].display_name}}</h2>
       <p>{{author[1].about}}</p>
+      {% if author[1].PGP_fingerprint %}
+        <p>PGP 公钥：<a href={{author[1].PGP_URI}}>{{author[1].PGP_fingerprint}}</a></p>
+      {% endif %}
       <ul class="tag">
         {% for post in site.posts %}
           {% for a in post.author %}
