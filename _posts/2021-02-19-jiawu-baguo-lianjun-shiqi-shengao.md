@@ -4,7 +4,7 @@ title: 甲午战争和八国联军时期的中国身高
 author: [maiming]
 date:   2021-02-19
 categories: data
-tags: 中国 日本
+tags: 中国 日本 清末
 description: 日本人在两次对华战争中都对清朝人进行了身体测量。
 license: 'cc-by-3.0-cn'
 ---

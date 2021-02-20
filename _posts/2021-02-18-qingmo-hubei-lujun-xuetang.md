@@ -4,7 +4,7 @@ title: 一份新发现的清末数据
 author: [maiming]
 date:   2021-02-18
 categories: data
-tags: 中国
+tags: 中国 清末
 description: 要获取中国1950年之前的身高数据，或许应该去日本找。
 license: 'cc-by-3.0-cn'
 ---
