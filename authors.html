@@ -1,0 +1,62 @@
+---
+layout: page
+title: 作者
+---
+
+<div class="tags">
+  <ul class="label">
+    {% for author in site.data.authors %}
+      {% assign posts_count = 0 %}
+      {% for post in site.posts %}
+        {% for a in post.author %}
+          {% if author[0] == a %}
+            {% assign posts_count = posts_count | plus: 1 %}
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+      {% if posts_count != 0 %}
+        <li>
+          <a href="#{{ author[1].display_name }}">
+            <span>{{ author[1].display_name }}</span>
+            <span class="count">{{ posts_count }}</span>
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+  {% for author in site.data.authors %}
+    {% assign posts_count = 0 %}
+    {% for post in site.posts %}
+      {% for a in post.author %}
+        {% if author[0] == a %}
+          {% assign posts_count = posts_count | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+    {% if posts_count != 0 %}
+      <h2 id="{{author[1].display_name}}">{{author[1].display_name}}</h2>
+      <p>{{author[1].about}}</p>
+      <ul class="tag">
+        {% for post in site.posts %}
+          {% for a in post.author %}
+            {% if author[0] == a %}
+              <li>
+                {% if post.link %}
+                <a href="{{ post.link }}">
+                {% else %}
+                <a href="{{ site.baseurl }}{{ post.url }}">
+                {% endif %}
+                    {{ post.title }}
+                </a>
+                <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endfor %}
+</div>
+  
+<script> pangu.spacingPage(); </script>

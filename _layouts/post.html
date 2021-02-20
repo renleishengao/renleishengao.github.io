@@ -1,0 +1,97 @@
+---
+layout: default
+---
+
+<article class="post">
+  <h1>{{ page.title }}</h1>
+
+  <div class="meta">
+    <span class="author">
+      {% for a in page.author %}
+        {% assign author = site.data.authors[a] %}
+        <a href="{{ site.baseurl }}/authors.html#{{ author.display_name }}">
+          {{ author.display_name }}
+        </a>
+      {% endfor %}
+    </span>
+    <span class="date">
+      {{ page.date | date: "%Y-%m-%d" }}
+    </span>
+    <ul class="tag">
+      {% for tag in page.tags %}
+      <li>
+        <a href="{{ site.baseurl }}/tags.html#{{ tag }}">
+          {{ tag }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="entry">
+    {{ content }}
+  </div>
+
+  <div class="license" style="width:300px;">
+  {% if page.license == 'cc-by-3.0-cn' %}
+    <a rel="license" href="http://creativecommons.org/licenses/by/3.0/cn/"><img alt="知识共享许可协议" style="border-width:0" src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg" /></a><br />本作品采用<br><a rel="license" href="http://creativecommons.org/licenses/by/3.0/cn/">知识共享署名 3.0 中国大陆许可协议</a><br>　进行许可。
+  {% endif %}
+
+  {% if page.license == 'cc-by-3.0-cn-en' %}
+    <a rel="license" href="https://creativecommons.org/licenses/by/3.0/cn/deed.en"><img alt="知识共享许可协议" style="border-width:0" src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg" /></a><br />This work is licensed under a <br><a rel="license" href="http://creativecommons.org/licenses/by/3.0/cn/">Creative Commons Attribution 3.0 China Mainland License</a>.
+  {% endif %}
+
+  {% if page.license == 'all rights reserved' %}
+    ©️<br />保留所有权利。
+  {% endif %}
+
+  {% if page.license == 'all rights reserved en' %}
+  ©️<br />All rights reserved.
+  {% endif %} 
+  </div>
+
+  <hr style="border-top:0.5px solid #28323C;"/>
+
+  {% if page.enable_mathjax == true %}
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [
+          ['$$', '$$'],
+          ['\\[', '\\]']             // start/end delimiter pairs for display math
+        ]
+      }
+    };
+  </script>
+  {% endif %}
+
+  <div class="pagination">
+    {% if page.previous.url %}
+      <span class="prev" >
+          <a href="{{ site.baseurl }}{{ page.previous.url }}">
+            上一篇：{{ page.previous.title }}
+          </a>
+      </span>
+    {% endif %}
+    {% if page.next.url %}
+      <span class="next" >
+          <a href="{{ site.baseurl }}{{ page.next.url }}">
+            下一篇：{{ page.next.title }}
+          </a>
+      </span>
+    {% endif %}
+  </div>
+
+  <script> pangu.spacingPage(); </script>
+
+  {% comment %}
+  {% if page.enable_comments == true%}
+  <h2>评论区</h2>
+  {% include comments.html %}
+  {% endif %}
+  {% endcomment %}
+
+</article>
