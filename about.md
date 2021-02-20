@@ -33,8 +33,6 @@ permalink: /about.html
 
 网站目前由[埋名匿姓](/authors.html#埋名匿姓)维持。
 
-埋名匿姓的个人邮箱是 [maiming@airmail.cc](mailto:maiming@airmail.cc)。
-
 ## 致谢
 
 本站 fork 自 [TerminusBot](https://github.com/TerminusBot)（蔡伟）的开源项目 [terminus-jekyll-template](https://github.com/TerminusBot/terminus-jekyll-template)。
