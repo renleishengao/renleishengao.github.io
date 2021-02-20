@@ -37,6 +37,9 @@ title: 作者
     {% if posts_count != 0 %}
       <h2 id="{{author[1].display_name}}">{{author[1].display_name}}</h2>
       <p>{{author[1].about}}</p>
+      {% if author[1].email %}
+        <p>电子邮箱：<a href=mailto:{{author[1].email}}>{{author[1].email}}</a></p>
+      {% endif %}
       {% if author[1].PGP_fingerprint %}
         <p>PGP 公钥：<a href={{author[1].PGP_URI}}>{{author[1].PGP_fingerprint}}</a></p>
       {% endif %}
