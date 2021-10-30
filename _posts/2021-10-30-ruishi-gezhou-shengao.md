@@ -12,7 +12,7 @@ enable_mathjax: true
 
 ## 数据来源
 
-我们从瑞士联邦体育局（Bundesamt für Sport, BASPO）的网站上获取到了瑞士2016—2020年[兵役体质测试]((https://www.baspo.admin.ch/de/sportfoerderung/breitensport/fitnesstest-armee-fta-rekrutierung.html))（Fitnesstest der Armee, FTA）的数据。
+我们从瑞士联邦体育局（Bundesamt für Sport, BASPO）的网站上获取到了瑞士2016—2020年[兵役体质测试](https://www.baspo.admin.ch/de/sportfoerderung/breitensport/fitnesstest-armee-fta-rekrutierung.html)（Fitnesstest der Armee, FTA）的数据。
 
 ### 样本量与代表性
 
@@ -311,7 +311,7 @@ enable_mathjax: true
 
 ## 身高与语言的关系
 
-我们从瑞士联邦统计局（Bundesamt für Statistik, BFS）的网站上获取了2019年瑞士各州的主要[语言分布数据]((https://www.bfs.admin.ch/bfs/de/home/statistiken/kataloge-datenbanken/tabellen.assetdetail.15384573.html))，选取并计算了永久居留人口中15—24岁年龄层说各种语言的人口比例，按照下面的统计模型进行了回归分析。
+我们从瑞士联邦统计局（Bundesamt für Statistik, BFS）的网站上获取了2019年瑞士各州的主要[语言分布数据](https://www.bfs.admin.ch/bfs/de/home/statistiken/kataloge-datenbanken/tabellen.assetdetail.15384573.html)，选取并计算了永久居留人口中15—24岁年龄层说各种语言的人口比例，按照下面的统计模型进行了回归分析。
 
 \\[h_c = k_l p_{c, l} + b_l + \varepsilon_c\\]
 
